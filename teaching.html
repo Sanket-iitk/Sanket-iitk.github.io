@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanket - Teaching</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      
+      .hero-section {
+            background: url('https://images.unsplash.com/photo-1606761568499-6d2451b23c66?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-position:  bottom;
+            background-repeat: no-repeat;
+            background-size: cover;           
+            background-attachment: fixed;     
+
+        }
+      
+    </style>
+
+</head>
+
+<body class="bg-blue-100">
+
+
+    <nav  class="bg-blue-700 sticky w-full z-20 top-0 left-0 border-b border-gray-200">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <p class="text-2xl font-bold text-white">Sanket</p>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" id="index">Home</a>
+                    <a href="education.html" id="education">Education</a>
+                    <a href="teaching.html" id="teaching">Teaching</a>
+                    <a href="research.html" id="research">Research</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu (Hidden by default) -->
+            <div id="mobile-menu" class="md:hidden mt-2" style="display: none;">
+                <a href="index.html" id="index" class="block py-2">Home</a>
+                <a href="education.html" id="education" class="block py-2">Education</a>
+                <a href="teaching.html" id="teaching" class="block py-2">Teaching</a>
+                <a href="research.html" id="research" class="block py-2">Research</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="sticky w-full">
+        <section class="hero-section bg-gray-900 text-white py-16 bg-cover bg-no-repeat bg-fixed ">
+            <div class="absolute inset-0 bg-gray-900 opacity-10"></div>
+            <div class="container mx-auto mt-14">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">Teaching</h1>
+
+        </section>
+    </div>
+
+    <div class="rounded-xl shadow bg-white p-4 container my-10 mx-auto">
+
+
+        <section class="mx-0 md:mx-4 my-8 p-0 md:p-6 bg-white rounded-md">
+            <!-- <h2 class="text-3xl font-semibold mb-4 border-b-2 border-gray-700 pb-2 text-gray-800">Teaching</h2> -->
+
+            <div class="bg-blue-700 text-white p-6">
+                <p class="text-3xl text-center"> Will be updated soon
+
+                    <i class="fa-solid fa-pen-nib text-white"></i>
+                </p>
+            </div>
+
+            <!-- <div class="mb-6 hover:bg-gray-100 p-4">
+                <h3 class="text-xl font-semibold text-blue-500">ME97: Applied Thermodynamics for Engineers</h3>
+                <p class="text-lg">Institute: NPTEL</p>
+                <p class="text-lg">July - October, 2023</p>
+                <p class="text-lg">Online live problem-solving sessions</p>
+            </div>
+
+            <div class="flex justify-center my-5">
+                <div class="w-5/6">
+                    <hr>
+                </div>
+            </div>
+
+            <div class="mb-6 hover:bg-gray-100 p-4">
+
+                <h3 class="text-xl font-semibold text-blue-500">ESO201: Thermodynamics</h3>
+                <p class="text-lg">Institute: Indian Institute of Technology Kanpur</p>
+                <p class="text-lg">Semester I, 2023</p>
+                <p class="text-lg">Teaching Assistant</p>
+            </div> -->
+        </section>
+    </div>
+
+
+    <footer class="bg-black text-white p-4">
+        <div class="container mx-auto flex items-center justify-between">
+  
+            <div>
+                <p class="text-xl">+91 82176 65725</p>
+                <p class="text-xl">maruvada23@iitk.ac.in</p>
+            </div>
+  
+            <!-- Social Icons -->
+            <div class="flex space-x-4">
+                <a href="#" class="text-white text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white text-2xl"><i class="fab fa-linkedin"></i></a>
+                <!-- Add more social icons as needed -->
+            </div>
+  
+        </div>
+    </footer>
+
+
+    <script src="./script.js"></script>
+
+
+</body>
+
+</html>

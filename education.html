@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanket - Education</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .timeline {
+            position: relative;
+            margin: 50px auto;
+            padding: 40px 0;
+            width: 1000px;
+            box-sizing: border-box;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #c5c5c5;
+        }
+
+        .timeline ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .timeline ul li {
+            list-style: none;
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+
+        .timeline ul li:nth-child(odd) {
+            float: left;
+            text-align: right;
+            clear: both;
+        }
+
+        .timeline ul li:nth-child(even) {
+            float: right;
+            text-align: left;
+            clear: both;
+        }
+
+        .content {
+            padding-bottom: 20px;
+        }
+
+        .timeline ul li:nth-child(odd):before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 24px;
+            right: -6px;
+            background: #174883;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px #bfdbfe;
+        }
+
+        .timeline ul li:nth-child(even):before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 24px;
+            left: -4px;
+            background: #60a5fa;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px #bfdbfe;
+        }
+
+        .timeline ul li h3 {
+            padding: 0;
+            margin: 0;
+            color: #60a5fa;
+            font-weight: 600;
+        }
+
+        .timeline ul li p {
+            margin: 10px 0 0;
+            padding: 0;
+        }
+
+        .timeline ul li .time h4 {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .timeline ul li:nth-child(odd) .time {
+            position: absolute;
+            top: 12px;
+            right: -135px;
+            margin: 0;
+            padding: 8px 16px;
+            background: #60a5fa;
+            color: #fff;
+            border-radius: 18px;
+            box-shadow: 0 0 0 3px #bfdbfe;
+        }
+
+        .timeline ul li:nth-child(even) .time {
+            position: absolute;
+            top: 12px;
+            left: -135px;
+            margin: 0;
+            padding: 8px 16px;
+            background: #60a5fa;
+            color: #fff;
+            border-radius: 18px;
+            box-shadow: 0 0 0 3px #bfdbfe;
+        }
+
+        @media(max-width:1000px) {
+            .timeline {
+                width: 100%;
+            }
+        }
+
+        @media(max-width:767px) {
+            .timeline {
+                width: 100%;
+                padding-bottom: 0;
+            }
+
+
+            .timeline:before {
+                left: 20px;
+                height: 100%;
+            }
+
+            .timeline ul li:nth-child(odd),
+            .timeline ul li:nth-child(even) {
+                width: 100%;
+                text-align: left;
+                padding-left: 50px;
+                padding-bottom: 50px;
+            }
+
+            .timeline ul li:nth-child(odd):before,
+            .timeline ul li:nth-child(even):before {
+                top: -18px;
+                left: 16px;
+            }
+
+            .timeline ul li:nth-child(odd) .time,
+            .timeline ul li:nth-child(even) .time {
+                top: -30px;
+                left: 50px;
+                right: inherit;
+            }
+        }
+
+
+
+        .hero-section {
+            background: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;      
+            background-attachment: fixed;     
+        }
+
+      
+    </style>
+
+</head>
+
+<body class="bg-blue-100">
+
+    
+    <nav  class="bg-blue-700 sticky w-full z-20 top-0 left-0 border-b border-gray-200">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <p class="text-2xl font-bold text-white">Sanket</p>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" id="index">Home</a>
+                    <a href="education.html" id="education">Education</a>
+                    <a href="teaching.html" id="teaching">Teaching</a>
+                    <a href="research.html" id="research">Research</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu (Hidden by default) -->
+            <div id="mobile-menu" class="md:hidden mt-2" style="display: none;">
+                <a href="index.html" id="index" class="block py-2">Home</a>
+                <a href="education.html" id="education" class="block py-2">Education</a>
+                <a href="teaching.html" id="teaching" class="block py-2">Teaching</a>
+                <a href="research.html" id="research" class="block py-2">Research</a>
+            </div>
+        </div>
+    </nav>
+
+
+ <div class="sticky w-full">
+    <section class="hero-section bg-gray-900 text-white py-16 bg-cover bg-no-repeat bg-fixed ">
+        <div class="absolute inset-0 bg-gray-900 opacity-10"></div>
+        <div class="container mx-auto mt-14">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">Education</h1>
+            
+    </section>
+ </div>
+
+    <div class="rounded-xl shadow bg-white p-4 container my-10 mx-auto">
+        <div class="timeline">
+            <ul>
+                <li>
+                    <div class="content">
+                        <h3>Doctor of Philosophy (PhD)
+                        </h3>
+                        <p> <strong>CGPA: -
+                            </strong> </p>
+                        <div>
+                            <p>Department of Mechanical Engineering</p>
+                            <p>
+                                Indian Institute of Technology Kanpur, Kanpur
+
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        <h4>2023 - Present</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content">
+                        <h3>Bachelor of Technology
+                        </h3>
+                        <p> <strong>CGPA: 9.34/10
+                            </strong> </p>
+                        <div>
+                            <p>Department of Mechanical Engineering</p>
+                            <p>
+                                National Institute of Technology Manipur, Manipur
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        <h4>2019 - 2023</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content">
+                        <h3>Board of Intermediate Education
+                        </h3>
+                        <p> <strong>CGPA: 9.94/10
+                            </strong> </p>
+                        <div>
+                            <p>Class XII</p>
+                            <p>
+                                Sri Venkateswara Junior College, Visakhapatnam AP
+                            </p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        <h4>2017 - 2019</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content">
+                        <h3>CBSE
+                        </h3>
+                        <p> <strong>CGPA: 10/10
+                            </strong> </p>
+                        <div>
+                            <p>Class X</p>
+                            <p>
+                                Delhi Public School Ukkunagaram, Visakhapatnam
+                            </p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        <h4>2015 - 2017</h4>
+                    </div>
+                </li>
+
+
+
+
+
+                <div style="clear:both;"></div>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="bg-black text-white p-4">
+        <div class="container mx-auto flex items-center justify-between">
+  
+            <div>
+                <p class="text-xl">+91 82176 65725</p>
+                <p class="text-xl">maruvada23@iitk.ac.in</p>
+            </div>
+  
+            <!-- Social Icons -->
+            <div class="flex space-x-4">
+                <a href="#" class="text-white text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white text-2xl"><i class="fab fa-linkedin"></i></a>
+                <!-- Add more social icons as needed -->
+            </div>
+  
+        </div>
+    </footer>
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

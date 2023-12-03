@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanket - About</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: fill;
+        }
+
+        .personal-info {
+            text-align: center;
+            margin-top: 1.5rem;
+            
+        }
+
+        .personal-info h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+            color: #4a5568;
+            /* Heading Color */
+        }
+
+        .personal-info h3 {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0.3rem 0;
+            color: #718096;
+            /* Subheading Color */
+        }
+
+        .department {
+            color: #2d3748;
+            font-size: 1.2rem;
+
+
+            /* Text Color */
+        }
+
+        .research-focus p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #2d3748;
+        
+            /* Text Color */
+        }
+
+        .research-focus li {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            color: #2d3748;
+            /* Text Color */
+        }
+    </style>
+</head>
+
+<body class="bg-blue-100">
+    <nav  class="bg-blue-700 sticky w-full z-20 top-0 left-0 border-b border-gray-200">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <p class="text-2xl font-bold text-white">Sanket</p>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" id="index">Home</a>
+                    <a href="education.html" id="education">Education</a>
+                    <a href="teaching.html" id="teaching">Teaching</a>
+                    <a href="research.html" id="research">Research</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu (Hidden by default) -->
+            <div id="mobile-menu" class="md:hidden mt-2" style="display: none;">
+                <a href="index.html" id="index" class="block py-2">Home</a>
+                <a href="education.html" id="education" class="block py-2">Education</a>
+                <a href="teaching.html" id="teaching" class="block py-2">Teaching</a>
+                <a href="research.html" id="research" class="block py-2">Research</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="rounded-xl shadow-2xl bg-white p-4 container my-10 mx-auto">
+
+        <section class="py-5 bg-white rounded-md">
+            <div class="flex items-center justify-center">
+                <img src="https://cdn.vectorstock.com/i/1000x1000/52/64/default-placeholder-profile-icon-vector-14065264.webp"
+                    alt="Sanket" class="profile-image">
+            </div>
+
+            <div class="personal-info">
+                <h2 class="text-indigo-700">Maruvada Sanket</h2>
+                <h3 class="text-gray-500">PhD Scholar (PMRF)</h3>
+                <p class="department">
+                    Combustion & Energy Conversion Systems Laboratory <br>Indian Institute of Technology
+                    Kanpur<br>Kanpur, India (208016)
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-4 py-12 p-1 md:p-6 rounded-md" style="background-color: #f2f6fa;">
+            <div class="flex flex-col justify-center">
+                <h2 class="text-2xl md:text-3xl text-center font-bold mb-5 text-indigo-800">My Research Focus
+                    <i class="fa-solid fa-graduation-cap text-yellow-500"></i>
+                </h2>
+
+                <div class="research-focus">
+                    <p style="margin-bottom: 1rem;">
+                        Welcome to my webpage.
+                    </p>
+                    <p class="text-justify">
+                        I am Maruvada Sanket, presently a Ph.D. student in the Department of
+                        Mechanical Engineering in
+                        <u>Indian Institute of Technology Kanpur</u>
+                        working under the supervision of
+
+                        <span style="white-space: nowrap;" class="text-indigo-700 font-medium">Dr. Santanu De</span>
+                        and
+                        <span style="white-space: nowrap;" class="text-indigo-700 font-medium">
+                            Dr. Anikesh Pal
+                        </span>. I am a Prime Minister's Research
+                        Fellow(Cycle-11) from August 2023. My current research topic is on
+                        Numerical Simulations of Rotating Detonation Engines.
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="mb-4 py-6 p-4  rounded-md" style="background-color: #f2f6fa;">
+            <div class="flex flex-col justify-center">
+                <h2 class="text-3xl text-center font-bold mb-5 text-indigo-800">Achievements <i
+                        class="fa-solid fa-award text-yellow-500"></i></h2>
+
+                <div class="research-focus">
+                    <ul>
+                        <li class="flex gap-2">
+                            <div><i class="fa-solid fa-star text-yellow-400"></i></div>
+                            <div>Selected for Prime Minister’s Research Fellowship (Cycle-11).
+                            </div>
+                        </li>
+                        <li class="flex gap-2">
+                            <div><i class="fa-solid fa-star text-yellow-400"></i></div>
+                            <div>
+                                Recipient of Institute Gold Medal for securing 1st Rank in the Department of
+                                Mechanical Engineering, NIT Manipur.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-black text-white p-4">
+        <div class="container mx-auto flex items-center justify-between">
+  
+            <div>
+                <p class="text-xl">+91 82176 65725</p>
+                <p class="text-xl">maruvada23@iitk.ac.in</p>
+            </div>
+  
+            <!-- Social Icons -->
+            <div class="flex space-x-4">
+                <a href="#" class="text-white text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white text-2xl"><i class="fab fa-linkedin"></i></a>
+                <!-- Add more social icons as needed -->
+            </div>
+  
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

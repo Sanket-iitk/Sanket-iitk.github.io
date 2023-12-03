@@ -1,0 +1,38 @@
+
+.container {
+    max-width: 90vw;
+}
+
+@media(max-width:800px) {
+    .container {
+        max-width: 96vw;
+    }
+}
+
+nav {
+   
+    padding: 0.6rem;
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    padding: 4px;
+}
+
+nav a:hover {
+    background-color: aliceblue;
+    color: black;
+    border-radius: 10px;
+   
+}
+
+.highlighted-tab {
+    background-color: aliceblue;
+    color: black;
+    border-radius: 10px;
+}
